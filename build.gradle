@@ -3,8 +3,33 @@ plugins {
     id 'com.android.application' version '7.1.2' apply false
     id 'com.android.library' version '7.1.2' apply false
     id 'org.jetbrains.kotlin.android' version '1.6.20' apply false
+    id 'androidx.navigation.safeargs.kotlin' version '2.4.2' apply false
+    id 'org.jetbrains.kotlin.plugin.serialization' version '1.6.21' apply false
 }
 
 task clean(type: Delete) {
     delete rootProject.buildDir
+}
+
+ext {
+    kotlin_version    = '1.6.20'
+    junit             = '4.13.2'
+    mockk             = '1.12.0'
+    room              = "2.4.2"
+    glide             = "4.12.0"
+    hilt_version      = "2.38.1"
+    appCompat         = "1.4.1"
+    ktx               = "1.7.0"
+    constraintLayout  = "2.1.3"
+    recyclerView      = "1.2.1"
+    retrofit          = "2.9.0"
+    httpLogging       = "5.0.0-alpha.2"
+    test_monitor      = "1.5.0"
+    coroutines        = "1.6.0-RC3"
+    view_model        = "2.4.1"
+    test_arch         = "2.1.0"
+    live_data         = "2.4.1"
+    compose           = "1.4.0"
+    navigation        = "2.4.2"
+    swipe             = "1.1.0"
 }

@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">RestaurantListApp</string>
+    <string name="message_error">Oops! Something went wrong.\nPlease try again</string>
+    <string name="no_items">No items to show</string>
+    <string name="search">Search here</string>
+    <string name="best_match">BEST MATCH</string>
+    <string name="newest">NEWEST</string>
+    <string name="rating">RATING</string>
+    <string name="distance">DISTANCE</string>
+    <string name="popularity">POPULARITY</string>
+    <string name="average_price">AVERAGE_PRICE</string>
+    <string name="delivery_cost">DELIVERY_COST</string>
+    <string name="minimum_price">MINIMUM_PRICE</string>
+    <string name="sort_selected">Sort Selected: </string>
+    <string name="sort_value">Sort Value: </string>
 </resources>
+
