@@ -11,6 +11,13 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import javax.inject.Inject
 
+/**
+ * Save and fetch data from memory and local and return to [RestaurantsRepoImpl]
+ *
+ * @Author: Akash Abhishek
+ * @Date: 07 July 2022
+ */
+
 class RestaurantsRepoImpl @Inject constructor(
     private val restaurantMemoryDataSource: RestaurantsDataSource.Memory,
     private val restaurantLocalDataSource: RestaurantsDataSource.Local,

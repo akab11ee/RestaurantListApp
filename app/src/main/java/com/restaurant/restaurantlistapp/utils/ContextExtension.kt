@@ -11,6 +11,11 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.NavDirections
 import androidx.navigation.fragment.findNavController
 
+/**
+ * @Author: Akash Abhishek
+ * @Date: 07 July 2022
+ */
+
 @SuppressLint("MissingPermission")
 @Suppress("DEPRECATION")
 fun Context.vibrateDevice(duration: Long = 50L) {
@@ -20,10 +25,6 @@ fun Context.vibrateDevice(duration: Long = 50L) {
     } else {
         vibrator.vibrate(duration)
     }
-}
-
-fun Context.toastL(message: String) {
-    Toast.makeText(this, message, Toast.LENGTH_LONG).show()
 }
 
 fun Fragment.navigate(destination: NavDirections) = with(findNavController()) {

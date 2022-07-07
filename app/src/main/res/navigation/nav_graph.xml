@@ -17,7 +17,7 @@
 
     <dialog
         android:id="@+id/filterDialog"
-        android:name="com.restaurant.restaurantlistapp.ui.dialog.FilterDialog"
+        android:name="com.restaurant.restaurantlistapp.ui.dialog.FilterBottomSheetDialog"
         tools:layout="@layout/dialog_filter">
         <argument
             android:name="sortingValue"

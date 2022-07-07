@@ -8,6 +8,13 @@ import androidx.lifecycle.LifecycleObserver
 import androidx.viewbinding.ViewBinding
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 
+/**
+ * Common method for all bottom sheet dialog can be put here
+ *
+ * @Author: Akash Abhishek
+ * @Date: 07 July 2022
+ */
+
 abstract class BaseBottomSheetDialog<VB : ViewBinding> : BottomSheetDialogFragment(),
     LifecycleObserver {
 

@@ -14,10 +14,15 @@ import com.restaurant.restaurantlistapp.ui.base.BaseFragment
 import com.restaurant.restaurantlistapp.ui.fragments.adapter.RestaurantListAdapter
 import com.restaurant.restaurantlistapp.utils.AppConstant
 import com.restaurant.restaurantlistapp.utils.navigate
+import com.restaurant.restaurantlistapp.utils.vibrateDevice
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_restaurant.*
-import kotlinx.coroutines.flow.collect
 import java.util.*
+
+/**
+ * @Author: Akash Abhishek
+ * @Date: 07 July 2022
+ */
 
 @AndroidEntryPoint
 class RestaurantListFragment : BaseFragment<FragmentRestaurantBinding, RestaurantViewModel>() {
@@ -33,11 +38,6 @@ class RestaurantListFragment : BaseFragment<FragmentRestaurantBinding, Restauran
         initUI()
         initFilterClick()
         observeSortingCallBacks()
-        /*viewModel.setSorting(
-            SearchSortFilter.Sorting(
-                isSortByBestMatch = true
-            )
-        )*/
         getRestaurantData()
     }
 
@@ -71,6 +71,7 @@ class RestaurantListFragment : BaseFragment<FragmentRestaurantBinding, Restauran
         recycler_view.adapter = listAdapter
     }
 
+    //Observe sorted data
     private fun getRestaurantData() {
         lifecycleScope.launchWhenStarted {
             viewModel.restaurantsFlow.collect {
@@ -105,6 +106,7 @@ class RestaurantListFragment : BaseFragment<FragmentRestaurantBinding, Restauran
         findNavController().currentBackStackEntry?.savedStateHandle?.getLiveData<SearchSortFilter.Sorting>(
             AppConstant.SORTING_KEY
         )?.observe(viewLifecycleOwner) {
+            context?.vibrateDevice()
             viewModel.setSorting(it)
         }
     }

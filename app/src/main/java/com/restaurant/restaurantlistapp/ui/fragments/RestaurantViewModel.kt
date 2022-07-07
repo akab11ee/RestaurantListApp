@@ -6,15 +6,22 @@ import com.restaurant.restaurantlistapp.data.entity.Result
 import com.restaurant.restaurantlistapp.di.qualifier.IoDispatcher
 import com.restaurant.restaurantlistapp.domain.model.Restaurants
 import com.restaurant.restaurantlistapp.domain.model.SearchSortFilter
-import com.restaurant.restaurantlistapp.domain.model.SortDetail
 import com.restaurant.restaurantlistapp.domain.usecase.RestaurantsFetchUseCase
 import com.restaurant.restaurantlistapp.domain.usecase.RestaurantsSortUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.*
-import kotlinx.coroutines.launch
 import javax.inject.Inject
+
+/**
+ * Provide state flow of sorted restaurant to be observed by UI
+ * Used state flow which requires initialization hence no need for null check
+ * Using one API in project(Flow), not two (LiveData and Flow).
+ *
+ * @Author: Akash Abhishek
+ * @Date: 07 July 2022
+ */
 
 @HiltViewModel
 @OptIn(ExperimentalCoroutinesApi::class)
@@ -60,8 +67,10 @@ class RestaurantViewModel @Inject constructor(
         Result.Loading
     )
 
+    //Provide data sorted by query
     fun setQuery(query: String) = restaurantsSortUseCase.setQuery(query)
 
+    //Provide data sorted by filter
     fun setSorting(sorting: SearchSortFilter.Sorting) = restaurantsSortUseCase.setSorting(sorting)
 
     fun getCurrentFilterState(): SearchSortFilter.Sorting {

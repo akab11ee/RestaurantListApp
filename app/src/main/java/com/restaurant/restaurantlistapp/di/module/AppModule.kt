@@ -21,6 +21,13 @@ import kotlinx.serialization.json.Json
 import timber.log.Timber
 import javax.inject.Singleton
 
+/**
+ * Provides application dependencies
+ *
+ * @Author: Akash Abhishek
+ * @Date: 07 July 2022
+ */
+
 @Module
 @InstallIn(SingletonComponent::class)
 class AppModule {

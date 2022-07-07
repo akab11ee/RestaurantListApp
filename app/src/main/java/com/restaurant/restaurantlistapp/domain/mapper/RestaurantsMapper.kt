@@ -10,8 +10,15 @@ import com.restaurant.restaurantlistapp.domain.model.SortDetail
 import com.restaurant.restaurantlistapp.domain.model.Status
 import javax.inject.Inject
 
+/**
+ * Maps data from Restaurants DTO to Restaurants model class and sort as per priority and initial filter
+ *
+ * @Author: Akash Abhishek
+ * @Date: 07 July 2022
+ */
 class RestaurantsMapper @Inject constructor() {
 
+    // Sort data as per priority and initial filter "BEST_MATCH"
     fun mapToRestaurants(dto: RestaurantsDto) = Restaurants(
         restaurants = dto.restaurants?.map(::mapToRestaurant)
             ?.sortedWith(compareBy<Restaurant> { it.status.priority }.thenByDescending { it.sortingValues.bestMatch })
@@ -30,6 +37,7 @@ class RestaurantsMapper @Inject constructor() {
         )
     )
 
+    //Map status of restaurant to enum with priority
     @VisibleForTesting
     fun mapToStatus(status: String?) =
         Status.values().find {

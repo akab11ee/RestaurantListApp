@@ -5,6 +5,13 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModel
 import androidx.viewbinding.ViewBinding
 
+/**
+ * Common method for all activities can be put here
+ *
+ * @Author: Akash Abhishek
+ * @Date: 07 July 2022
+ */
+
 abstract class BaseActivity<VB : ViewBinding, VM : ViewModel?> :
     AppCompatActivity() {
 

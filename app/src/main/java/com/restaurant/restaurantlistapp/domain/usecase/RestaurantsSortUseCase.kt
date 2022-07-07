@@ -15,6 +15,13 @@ import kotlinx.coroutines.flow.flowOf
 import kotlinx.coroutines.flow.flowOn
 import javax.inject.Inject
 
+/**
+ * Provide method used for sorting and returns sorted data flowable
+ *
+ * @Author: Akash Abhishek
+ * @Date: 07 July 2022
+ */
+
 class RestaurantsSortUseCase @Inject constructor(
     @IoDispatcher
     private val ioDispatcher: CoroutineDispatcher

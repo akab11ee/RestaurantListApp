@@ -11,10 +11,17 @@ import com.restaurant.restaurantlistapp.utils.AppConstant
 import kotlinx.android.synthetic.main.dialog_filter.*
 
 
-class FilterDialog : BaseBottomSheetDialog<DialogFilterBinding>(), View.OnClickListener {
+/**
+ * Filter dialog UI
+ *
+ * @Author: Akash Abhishek
+ * @Date: 07 July 2022
+ */
+
+class FilterBottomSheetDialog : BaseBottomSheetDialog<DialogFilterBinding>(), View.OnClickListener {
 
     // Navigation
-    private val args: FilterDialogArgs by navArgs()
+    private val args: FilterBottomSheetDialogArgs by navArgs()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -49,6 +56,7 @@ class FilterDialog : BaseBottomSheetDialog<DialogFilterBinding>(), View.OnClickL
         return DialogFilterBinding.inflate(layoutInflater)
     }
 
+    //Returns the required sorting value on click of button
     override fun onClick(view: View?) {
         when (view?.id) {
             btn_best_match.id -> sortListData(SearchSortFilter.Sorting(isSortByBestMatch = true))

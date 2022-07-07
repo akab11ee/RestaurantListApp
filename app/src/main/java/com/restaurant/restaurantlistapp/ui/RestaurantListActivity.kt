@@ -11,6 +11,13 @@ import com.restaurant.restaurantlistapp.ui.base.BaseActivity
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_restaurant.*
 
+/**
+ * Used nav graph to add fragment over activity
+ *
+ * @Author: Akash Abhishek
+ * @Date: 07 July 2022
+ */
+
 @AndroidEntryPoint
 class RestaurantListActivity :
     BaseActivity<ActivityRestaurantBinding, RestaurantActivityViewModel>() {

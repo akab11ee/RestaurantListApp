@@ -10,6 +10,11 @@ import kotlinx.coroutines.flow.*
 import timber.log.Timber
 import javax.inject.Inject
 
+/**
+ * @Author: Akash Abhishek
+ * @Date: 07 July 2022
+ */
+
 class RestaurantsFetchUseCase @Inject constructor(
     private val restaurantsRepository: RestaurantsRepository,
     private val restaurantsMapper: RestaurantsMapper,

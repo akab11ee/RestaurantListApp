@@ -9,6 +9,13 @@ import androidx.lifecycle.LifecycleObserver
 import androidx.lifecycle.ViewModel
 import androidx.viewbinding.ViewBinding
 
+/**
+ * Common method for all fragment can be put here
+ *
+ * @Author: Akash Abhishek
+ * @Date: 07 July 2022
+ */
+
 abstract class BaseFragment<VB : ViewBinding, VM : ViewModel> : Fragment(),
     LifecycleObserver {
 

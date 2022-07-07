@@ -3,6 +3,11 @@ package com.restaurant.restaurantlistapp.domain.model
 import android.os.Parcel
 import android.os.Parcelable
 
+/**
+ * @Author: Akash Abhishek
+ * @Date: 07 July 2022
+ */
+
 data class SearchSortFilter(
     val sorting: Sorting = Sorting(),
     val filterQuery: String = "",

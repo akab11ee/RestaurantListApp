@@ -6,6 +6,11 @@ import com.restaurant.restaurantlistapp.util.RestaurantsFactory
 import org.junit.Assert.assertEquals
 import org.junit.Test
 
+/**
+ * @Author: Akash Abhishek
+ * @Date: 07 July 2022
+ */
+
 class RestaurantsMapperTest {
 
     private val mapper by lazy(::RestaurantsMapper)

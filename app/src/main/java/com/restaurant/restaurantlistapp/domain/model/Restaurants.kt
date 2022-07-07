@@ -1,5 +1,10 @@
 package com.restaurant.restaurantlistapp.domain.model
 
+/**
+ * @Author: Akash Abhishek
+ * @Date: 07 July 2022
+ */
+
 data class Restaurants(
     val restaurants: List<Restaurant> = listOf()
 ) {

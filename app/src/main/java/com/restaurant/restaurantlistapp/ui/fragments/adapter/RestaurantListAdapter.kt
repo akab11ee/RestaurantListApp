@@ -10,7 +10,7 @@ import com.restaurant.restaurantlistapp.domain.model.Restaurants
 
 /**
  * @Author: Akash Abhishek
- * @Date: 02 July 2022
+ * @Date: 07 July 2022
  */
 
 class RestaurantListAdapter :

@@ -6,6 +6,13 @@ import com.restaurant.restaurantlistapp.domain.model.Restaurants
 import com.restaurant.restaurantlistapp.domain.model.SortDetail
 import com.restaurant.restaurantlistapp.domain.model.Status
 
+/**
+ * Provides data used for testing
+ *
+ * @Author: Akash Abhishek
+ * @Date: 07 July 2022
+ */
+
 object RestaurantsFactory {
 
     fun getMockRestaurantsDto() = RestaurantsDto(

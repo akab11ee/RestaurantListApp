@@ -49,9 +49,9 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/horizontal_margin_mid"
                     android:padding="@dimen/min_padding"
+                    android:text="@string/sort_selected"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_name"
-                    android:text="@string/sort_selected" />
+                    app:layout_constraintTop_toBottomOf="@+id/tv_name" />
 
                 <TextView
                     android:id="@+id/tv_selected_sorting"
@@ -72,9 +72,9 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/horizontal_margin_mid"
                     android:padding="@dimen/min_padding"
+                    android:text="@string/sort_value"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_selected_sorting_text"
-                    android:text="@string/sort_value" />
+                    app:layout_constraintTop_toBottomOf="@+id/tv_selected_sorting_text" />
 
                 <TextView
                     android:id="@+id/tv_sort_value"

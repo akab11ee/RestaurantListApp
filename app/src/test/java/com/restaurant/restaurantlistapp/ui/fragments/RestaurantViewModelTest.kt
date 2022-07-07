@@ -19,12 +19,14 @@ import org.junit.Assert.assertEquals
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
-import org.junit.runner.RunWith
-import org.mockito.junit.MockitoJUnitRunner
+
+/**
+ * @Author: Akash Abhishek
+ * @Date: 07 July 2022
+ */
 
 @ExperimentalCoroutinesApi
 @InternalCoroutinesApi
-@RunWith(MockitoJUnitRunner.Silent::class)
 class RestaurantViewModelTest {
 
     @get:Rule

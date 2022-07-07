@@ -8,9 +8,10 @@ import com.restaurant.restaurantlistapp.R
 
 /**
  * @Author: Akash Abhishek
- * @Date: 25 April 2022
+ * @Date: 07 July 2022
  */
 
+//Used to set selected and un selected filter buttons color
 @BindingAdapter("set_background_filter")
 fun setFilterButtonBackground(view: AppCompatButton, isSelected: Boolean?) {
     if (isSelected == true) {
@@ -20,6 +21,7 @@ fun setFilterButtonBackground(view: AppCompatButton, isSelected: Boolean?) {
     }
 }
 
+//Used to set text color of restaurant opening status
 @BindingAdapter("set_text_color")
 fun setTextColor(view: TextView, priority: Double?) {
     when (priority) {

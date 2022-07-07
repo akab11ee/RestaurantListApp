@@ -1,7 +1,14 @@
 package com.restaurant.restaurantlistapp.data.local.model
 
 import androidx.annotation.Keep
+import com.restaurant.restaurantlistapp.data.interfaces.RestaurantsRepository
+import com.restaurant.restaurantlistapp.domain.usecase.RestaurantsFetchUseCase
 import kotlinx.serialization.Serializable
+
+/**
+ * @Author: Akash Abhishek
+ * @Date: 07 July 2022
+ */
 
 @Serializable
 @Keep
