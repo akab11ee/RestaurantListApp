@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/restaurantFragment">
+
+    <fragment
+        android:id="@+id/restaurantFragment"
+        android:name="com.restaurant.restaurantlistapp.ui.fragments.RestaurantListFragment"
+        android:label="Restaurant List"
+        tools:layout="@layout/fragment_restaurant">
+        <action
+            android:id="@+id/action_search"
+            app:destination="@id/filterDialog" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/filterDialog"
+        android:name="com.restaurant.restaurantlistapp.ui.dialog.FilterDialog"
+        tools:layout="@layout/dialog_filter">
+        <argument
+            android:name="sortingValue"
+            app:argType="com.restaurant.restaurantlistapp.domain.model.SearchSortFilter$Sorting" />
+    </dialog>
+</navigation>

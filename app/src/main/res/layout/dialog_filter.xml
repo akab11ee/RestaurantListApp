@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="item"
+            type="com.restaurant.restaurantlistapp.domain.model.SearchSortFilter.Sorting" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_first_column"
+            android:layout_width="@dimen/filter_width"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/default_margin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_best_match"
+                style="@style/Card.Clickable.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/default_padding"
+                android:text="@string/best_match"
+                android:textColor="@color/colorWhite"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:set_background_filter="@{item.sortByBestMatch}"
+                tools:background="@color/colorPrimaryLight" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_newest"
+                style="@style/Card.Clickable.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/vertical_margin_mid"
+                android:padding="@dimen/default_padding"
+                android:text="@string/newest"
+                android:textColor="@color/colorWhite"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_best_match"
+                app:set_background_filter="@{item.sortByNewest}"
+                tools:background="@color/colorPrimaryLight" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_rating_average"
+                style="@style/Card.Clickable.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/vertical_margin_mid"
+                android:padding="@dimen/default_padding"
+                android:text="@string/rating"
+                android:textColor="@color/colorWhite"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_newest"
+                app:set_background_filter="@{item.sortByRating}"
+                tools:background="@color/colorPrimaryLight" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_distance"
+                style="@style/Card.Clickable.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/vertical_margin_mid"
+                android:padding="@dimen/default_padding"
+                android:text="@string/distance"
+                android:textColor="@color/colorWhite"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_rating_average"
+                app:set_background_filter="@{item.sortByDistance}"
+                tools:background="@color/colorPrimaryLight" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_second_column"
+            android:layout_width="@dimen/filter_width"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/default_margin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_popularity"
+                style="@style/Card.Clickable.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/default_padding"
+                android:text="@string/popularity"
+                android:textColor="@color/colorWhite"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:set_background_filter="@{item.sortByPopularity}"
+                tools:background="@color/colorPrimaryLight" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_product_price"
+                style="@style/Card.Clickable.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/vertical_margin_mid"
+                android:padding="@dimen/default_padding"
+                android:text="@string/average_price"
+                android:textColor="@color/colorWhite"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_popularity"
+                app:set_background_filter="@{item.sortByAveragePrice}"
+                tools:background="@color/colorPrimaryLight" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_delivery_cost"
+                style="@style/Card.Clickable.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/vertical_margin_mid"
+                android:padding="@dimen/default_padding"
+                android:text="@string/delivery_cost"
+                android:textColor="@color/colorWhite"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_product_price"
+                app:set_background_filter="@{item.sortByDeliveryCost}"
+                tools:background="@color/colorPrimaryLight" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_minimum_cost"
+                style="@style/Card.Clickable.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/vertical_margin_mid"
+                android:padding="@dimen/default_padding"
+                android:text="@string/minimum_price"
+                android:textColor="@color/colorWhite"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_delivery_cost"
+                app:set_background_filter="@{item.sortByMinimumCost}"
+                tools:background="@color/colorPrimaryLight" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
